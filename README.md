@@ -15,7 +15,21 @@ https://techbookfest.org/product/5334756306714624
 その他何か表記ミスや内容間違いがあり、報告する余裕があれば、Issuesでよろしくお願いします。
 
 ## ver. 2022.01.18
-p65 あとがきの`技術書について`
+p18 Chrome DevTools `Networkタブのフィルタリング`
+
+```text
+- スタータス
++ ステータス
+```
+
+p61 その他 `Amazon CloudFront Functions`
+
+```text
+- ランタイムはECMAScript5.1対応のJavaScriptのみで、
++ 対応言語はECMAScript5.1対応のJavaScriptのみで、
+```
+
+p65 あとがき `技術書について`
 
 ```text
 - Typor
