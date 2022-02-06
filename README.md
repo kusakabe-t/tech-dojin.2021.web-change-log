@@ -17,21 +17,21 @@ https://techbookfest.org/product/5334756306714624
 ## ver. 2022.01.18
 p18 Chrome DevTools `Networkタブのフィルタリング`
 
-```text
+```diff
 - スタータス
 + ステータス
 ```
 
 p61 その他 `Amazon CloudFront Functions`
 
-```text
+```diff
 - ランタイムはECMAScript5.1対応のJavaScriptのみで、
 + 対応言語はECMAScript5.1対応のJavaScriptのみで、
 ```
 
 p65 あとがき `技術書について`
 
-```text
+```diff
 - Typor
 + Typora
 ```
