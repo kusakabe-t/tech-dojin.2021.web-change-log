@@ -1,21 +1,10 @@
-From 22c3391c8fe2f2fde7d0616a3dc9644f3f5d3b25 Mon Sep 17 00:00:00 2001
-From: pilefort <pilefort2020@gmail.com>
-Date: Sun, 23 Jan 2022 18:32:46 +0900
-Subject: [PATCH] fix typo
-
----
- afterword.md              | 2 +-
- others/others.md          | 4 ++--
- tools/chrome_dev_tools.md | 2 +-
- 3 files changed, 4 insertions(+), 4 deletions(-)
-
 diff --git a/afterword.md b/afterword.md
 index 8ea8af8..22fcf45 100644
 --- a/afterword.md
 +++ b/afterword.md
 @@ -8,7 +8,7 @@
  　あと締め切りに間に合わなくて、nxやturboreposなど書ききれなかった部分もあります。viteやdenoに関してももう少し書く予定でしたが、締め切りに負けました。無念！
-
+ 
  ## 技術書について
 -　本書はTyporを使ってPDFを生成しています。初めはRe:VIEWやRE:VIEW Starterを使って本を書いていたのですが、以下の理由で途中からTyporaに移行しました。
 +　本書はTyporaを使ってPDFを生成しています。初めはRe:VIEWやRE:VIEW Starterを使って本を書いていたのですが、以下の理由で途中からTyporaに移行しました。
@@ -28,31 +17,31 @@ index abca1a3..e66d07b 100644
 +++ b/others/others.md
 @@ -1,6 +1,6 @@
  ## その他
-
+ 
 -　本文中で触れられなかったものについてまとめてます。
 +　本文中で触れられなかったものについて簡単にまとめてます。
-
+ 
  ### bun
-
+ 
 @@ -117,7 +117,7 @@ const styles = stylex.create({
-
+ 
  ### Amazon CloudFront Functions
-
+ 
 -　Lambda@Edgeより手前で、単純なHTTPリクエストやレスポンスを返すためのサービスです (https://aws.amazon.com/jp/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/)。ランタイムはECMAScript 5.1対応のJavaScriptのみで、最大実行時間は1 ms, 配置できるパッケージのサイズは10 KBで、URLの書き換えやA/Bテスト、JWTトークン認証などで使うことを想定しているようです。
 +　Lambda@Edgeより手前で、単純なHTTPリクエストやレスポンスを返すためのサービスです (https://aws.amazon.com/jp/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/)。対応言語はECMAScript 5.1対応のJavaScriptのみで、最大実行時間は1 ms, 配置できるパッケージのサイズは10 KBで、URLの書き換えやA/Bテスト、JWTトークン認証などで使うことを想定しているようです。
-
+ 
  ### React GUI
-
+ 
 diff --git a/tools/chrome_dev_tools.md b/tools/chrome_dev_tools.md
 index e2bf65b..167b76a 100644
 --- a/tools/chrome_dev_tools.md
 +++ b/tools/chrome_dev_tools.md
 @@ -26,7 +26,7 @@
-
+ 
  　Chrome92からXHRがFetch/XHRに変更され、XMLHttpRequestとFetch APIの両方のネットワークリクエストを含むことがよりハッキリするようになりました (https://developer.chrome.com/blog/new-in-devtools-92/#network)。また、新しくWasmボタンが追加され、Wasmのネットワークリクエストをフィルタリングできるようになりました (https://developer.chrome.com/blog/new-in-devtools-92/#wasm)。
-
+ 
 -　Chrome94からはFilterにinvertチェックボックスが追加され、チェックを入れると入力した項目を除外してフィルタリングできるようになりました。例えば、以下ではスタータスが200のものを除外して表示させています。
 +　Chrome94からはFilterにinvertチェックボックスが追加され、チェックを入れると入力した項目を除外してフィルタリングできるようになりました。例えば、以下ではステータスが200のものを除外して表示させています。
-
+ 
  | <img alt='network-panel-button' style='zoom:50%' src='../images/devtools/network_panel_button.png'> |
  | :----------------------------------------------------------: |
