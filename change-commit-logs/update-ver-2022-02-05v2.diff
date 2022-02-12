@@ -1,9 +1,4 @@
-diff --git a/frameworks/remix.md b/frameworks/remix.md
-index 8d0d295..7649035 100644
---- a/frameworks/remix.md
-+++ b/frameworks/remix.md
-@@ -107,7 +107,7 @@ export const meta: MetaFunction = () => {
- 
+## Remix
  　Next.jsだとページが存在しないときに、ステータスコード 404で404ページを返すにはひと手間必要です (https://github.com/vercel/next.js/issues/4452)。しかし、Remixを使う場合は何も設定しなくても、ページが存在しないときは404のステータスコードと一緒に404ページを返してくれます。
  
 -　Nuxt3ではビルド時にデプロイ先を決めたりできますが、Remixではアプリ作成時にデプロイ先を選びます。候補としてはfly.ioやAWS Lambda, Cloudflare Workersなどがあります (https://remix.run/docs/en/v1/guides/deployment)。アプリを作り始めたらすぐにデプロイできるようにこのようにしているらしいです。
@@ -11,145 +6,67 @@ index 8d0d295..7649035 100644
  
  　VercelにもChecksというサービスを統合できるようになりましたが、RemixにもMetronomeというWeb Vitalsやアクセス数、発生したエラーの詳細を確認できるサービスがあります (https://metronome.sh/)。Rollbarなどをフロントに入れなくても、エラーの詳細が確認できるなら、ありがたいですが、まだ試してないので、詳細は分かりません。
  
-diff --git a/libraries/partytown.md b/libraries/partytown.md
-index 134cc1c..65ecc8b 100644
---- a/libraries/partytown.md
-+++ b/libraries/partytown.md
-@@ -2,7 +2,7 @@
- 
+## Partytown
  　Partytownはリソースを大量消費するスクリプトをWeb Worker (Service Workerなど) に移すことでメインスレッドのブロッキングを防ぐ遅延ロードライブラリです (https://github.com/BuilderIO/partytown)。
  
 -　Partytownは以下の目標を掲げています (https://github.com/BuilderIO/partytown/wiki#goals)。つまり、サードパーティーライブラリを従来通りのやり方で使ったり管理しつつ、Web Workerに安全に移行できるものを目指してるようです (解釈違いがあったらすみません)。
 +　Partytownは以下の目標を掲げています (https://github.com/BuilderIO/partytown/wiki#goals)。つまり、サードパーティーライブラリを従来通りのやり方で使ったり管理したりつつ、Web Workerに安全に移行できるものを目指してるようです (解釈違いがあったらすみません)。
  
- - Free up main thread resources to be used only for the primary web app execution.
- - Sandbox third-party scripts and allow or deny their access main thread APIs.
-diff --git a/libraries/swr.md b/libraries/swr.md
-index 84a2e20..6c586de 100644
---- a/libraries/swr.md
-+++ b/libraries/swr.md
-@@ -54,7 +54,7 @@ function Avatar ({ id }) {
- }
- ```
- 
+## SWR
 -　ちなみにデータを再検証するタイミングも制御でき、定期的に実行したい場合はrefreshInterval, ウィンドウが非表示のときにポーリングしたいならrefreshWhenHidden, ネットがオフラインのときにポーリングしたいならrefreshWhenOfflineなどのオプションを付けて制御できるそうです (https://swr.vercel.app/ja/docs/revalidation#%E5%AE%9A%E6%9C%9F%E7%9A%84%E3%81%AA%E5%86%8D%E6%A4%9C%E8%A8%BC)。
 +　ちなみにデータを再検証するタイミングも制御でき、定期的に実行したい場合はrefreshInterval, ウィンドウが非表示のときにポーリングしたいならrefreshWhenHidden, ネットワークがオフラインのときにポーリングしたいならrefreshWhenOfflineなどのオプションを付けて制御できるそうです (https://swr.vercel.app/ja/docs/revalidation#%E5%AE%9A%E6%9C%9F%E7%9A%84%E3%81%AA%E5%86%8D%E6%A4%9C%E8%A8%BC)。
  
- ```jsx
- useSWR('/api/todos', fetcher, { refreshInterval: 1000 })
-diff --git a/others/others.md b/others/others.md
-index e66d07b..787f617 100644
---- a/others/others.md
-+++ b/others/others.md
-@@ -16,9 +16,9 @@
- 
- ### Vite
- 
+### Vite 
 -　ビートと読みます。viteはnpmライブラリをesbuild経由でESModuleに変換して動かすためのビルドツールです。ESModuleを使うと、ブラウザはバンドラーの処理を一部引き受けることができるため、ホットリロードやサーバーの起動が速くなります。ESModuleを使うためにはES2015以上が動作するブラウザが必要ですが、@vitejs/plugin-legacyなどを入れるとポリフィルしてくれます。
 +　ビートと読みます。Viteはnpmライブラリをesbuild経由でESModuleに変換して動かすためのビルドツールです。ESModuleを使うと、ブラウザはバンドラーの処理を一部引き受けることができるため、ホットリロードやサーバーの起動が速くなります。ESModuleを使うためにはES2015以上が動作するブラウザが必要ですが、@Vitejs/plugin-legacyなどを入れるとポリフィルしてくれます。
  
 -　viteを搭載したアプリ (Shopify Hydrozen, SvelteKit, Vitestなど) も増えてきており、今後も伸びていくビルドツールだと思います。
 +　Viteを搭載したアプリケーション (Shopify Hydrozen, SvelteKit, Vitestなど) も増えてきており、今後も伸びていくビルドツールだと思います。
  
- ### Shopify Hydrozen
- 
-@@ -61,7 +61,7 @@ const styles = stylex.create({
-   active: { position: 'static' }
- });
- 
+### StyleX 
 -<div className={stylex(styles.base, isActive && styles.active}/>
 +<div className={stylex(styles.base, isActive && styles.active)} />
  ```
  
- ```html
-@@ -70,7 +70,6 @@ const styles = stylex.create({
- ```
- 
- ```css
+```css
 -# CSS側
  .position-abs {
    position: absolute;
  }
-@@ -79,13 +78,13 @@ const styles = stylex.create({
+
  .end-0 {right: 0; }
  .bottom-0 {bottom: 0; }
  .position-st {
 -  position: 'static';
 +  position: static;
  }
- ```
+```
  
- ### Deno Deploy
- 
+### Deno Deploy
 -　Deno DeployはDenoの分散ホスティングサービスです (https://deno.com/deploy)。Denoで作成したアプリをデプロイするだけでなく、Denoの機能を試せるPlaygroundなどが使えます。Denoは今年Nodejs互換モードも発表され、より使いやすくなり、利用者も増えそうな印象です (https://deno.land/std@0.121.0/node#deno-nodejs-compatibility)。ちなみに、`"node".split("").sort().join("")`でdenoです。
 +　Deno DeployはDenoの分散ホスティングサービスです (https://deno.com/deploy)。Denoで作成したアプリケーションをデプロイするだけでなく、Denoの機能を試せるPlaygroundなどが使えます。Denoは今年Nodejs互換モードも発表され、より使いやすくなり、利用者も増えそうな印象です (https://deno.land/std@0.121.0/node#deno-nodejs-compatibility)。ちなみに、`"node".split("").sort().join("")`でdenoです。
  
- ### Wasmer
- 
-diff --git a/services/app_runner.md b/services/app_runner.md
-index 57ddee0..79a870b 100644
---- a/services/app_runner.md
-+++ b/services/app_runner.md
-@@ -1,12 +1,12 @@
- ## AWS App Runner
- 
+## AWS App Runner 
 -　AWS App RunnerはAWSが提供する簡単にアプリケーションをデプロイできるコンテナサービスです (https://aws.amazon.com/jp/blogs/containers/introducing-aws-app-runner/)。Renderに近いサービスでGitHub連携もでき、コミットするごとにアプリをデプロイできます。その他にも、Auto Scalingやヘルスチェックの設定もでき、AWS KMSを使ってキーを暗号化して使うこともできます。
-+　AWS App RunnerはAWSが提供する簡単にアプリケーションをデプロイできるコンテナサービスです (https://aws.amazon.com/jp/blogs/containers/introducing-aws-app-runner/)。Renderに近いサービスでGitHub連携もでき、コミットするごとにアプリケーションをデプロイできます。その他にも、Auto Scalingやヘルスチェックの設定もでき、AWS KMSを使ってキーを暗号化して使うこともできます。
- 
- | <img src="../images/app_runner/setting1.png" alt="setting1" style="zoom:45%;" /> | <img src="../images/app_runner/setting2.png" alt="setting2" style="zoom:45%;" /> |
- | :----------------------------------------------------------: | :----------------------------------------------------------: |
- |               AWS App Runnerでのリポジトリ接続               |                  AWS App Runnerでの設定項目                  |
++　AWS App RunnerはAWSが提供する簡単にアプリケーションをデプロイできるコンテナサービスです (https://aws.amazon.com/jp/blogs/containers/introducing-aws-app-runner/)。Renderに近いサービスでGitHub連携もでき、コミットするごとにアプリケーションをデプロイできます。その他にも、Auto Scalingやヘルスチェックの設定もでき、AWS KMSを使ってキーを暗号化して使うこともできます
  
 -　RenderやRailwayのようにDockerfileを認識してアプリを作ったりはできないみたいですが、以下のような`apprunner.yaml`を作成して環境を記述します。ランタイムにはPython3とNodejs12を指定でき、ドキュメントは見当たらないですが、それ以外は設定できなさそうです。ただ、Java (https://github.com/aws/apprunner-roadmap/issues/16) やPHP (https://github.com/aws/apprunner-roadmap/issues/31)、Ruby (https://github.com/aws/apprunner-roadmap/issues/27) のサポートも追加される予定です。
 +　RenderやRailwayのようにDockerfileを認識してアプリケーションを作ることはできないみたいですが、以下のような`apprunner.yaml`を作成して環境を記述します。ランタイムにはPython3とNodejs12を指定でき、ドキュメントは見当たらないですが、それ以外は設定できなさそうです。ただ、Java (https://github.com/aws/apprunner-roadmap/issues/16) やPHP (https://github.com/aws/apprunner-roadmap/issues/31)、Ruby (https://github.com/aws/apprunner-roadmap/issues/27) のサポートも追加される予定です。
  
- ```yaml
- version: 1.0
-@@ -22,6 +22,6 @@ run:
-     port: 8000
- ```
- 
 -　RenderやRailwayと異なり、Dockerfileからアプリを作成しないため使える言語に制限があることと無料で試せない点が残念ですが、Fargateへの移行のしやすさやロードバランサーやスケーリングが簡単に設定できる部分が魅力的に感じます。ロードマップはこちらから確認できます (https://github.com/aws/apprunner-roadmap)。
 +　RenderやRailwayと異なり、Dockerfileからアプリケーションを作成しないため使える言語に制限があることと無料で試せない点が残念ですが、Fargateへの移行のしやすさやロードバランサーやスケーリングが簡単に設定できる部分が魅力的に感じます。ロードマップはこちらから確認できます (https://github.com/aws/apprunner-roadmap)。
- 
- <div style="page-break-after: always; break-after: page;color:lightgray" class="no-print">─────改ページ─────</div>
-diff --git a/services/planet_scale.md b/services/planet_scale.md
-index c5743da..6de33c2 100644
---- a/services/planet_scale.md
-+++ b/services/planet_scale.md
-@@ -1,6 +1,6 @@
- ## PlanetScale
- 
+
+## PlanetScale
 -　PlanetScaleはMySQL 8.0を利用できるサーバレスデータベースサービスです (https://planetscale.com/)。YouTubeのデータベース基盤として使われているVitess (https://github.com/vitessio/vitess) を使用しており、ノンブロッキングスキーマ変更が可能です。つまり、データベースのブロックやテーブルのロックが発生せずにスキーマ変更ができます (https://docs.planetscale.com/concepts/planetscale-workflow#non-blocking-schema-changes)。その他にもブランチ機能があり、本番のデータベースをコピーして実験したり、開発と本番でDBを分けることもできます。また、コネクションプールも組み込まれており、DBの接続制限なども意識しなくて良くなってます。リリースされて間もないサービスですが、日本リージョンも用意されてます。
 +　PlanetScaleはMySQL 8.0を利用できるサーバレスデータベースサービスです (https://planetscale.com/)。YouTubeのデータベース基盤として使われているVitess (https://github.com/vitessio/vitess) を使用しており、ノンブロッキングスキーマ変更が可能です。つまり、データベースのブロックやテーブルのロックが発生せずにスキーマ変更ができます (https://docs.planetscale.com/concepts/planetscale-workflow#non-blocking-schema-changes)。その他にもブランチ機能があり、本番のデータベースをコピーして実験したり、開発と本番でDBを分けたりできます。また、コネクションプールも組み込まれており、DBの接続制限なども意識しなくて良くなってます。リリースされて間もないサービスですが、日本リージョンも用意されてます。
  
- | <img src="../images/planet_scale/branch.png" alt="branch" style="zoom:60%;" /> |
- | :----------------------------------------------------------: |
-diff --git a/tools/github_cli.md b/tools/github_cli.md
-index e9eb372..3999f38 100644
---- a/tools/github_cli.md
-+++ b/tools/github_cli.md
-@@ -1,6 +1,6 @@
- ## GitHub CLI
- 
+## GitHub CLI
 -　GitHub CLIはGitHub上での操作をCLIで実行するためのGitHub公式ツールです (https://cli.github.com/)。ローカルで新規にリポジトリを作成したり、PRの一覧・切り替え、GitHub APIの実行などができます。
-+　GitHub CLIはGitHub上での操作をCLIで実行するためのGitHub公式ツールです (https://cli.github.com/)。ローカルで新規にリポジトリを作成、PRの一覧・切り替えやGitHub APIの実行などができます。
++　GitHub CLIはGitHub上での操作をCLIで実行するためのGitHub公式ツールです (https://cli.github.com/)。ローカルで新規にリポジトリを作成、PRの一覧・切り替えやGitHub APIの実行などができま
  
- 　近いものでhubというCLIツールがありますが、それをGoで再実装し、GitHubで公式になったものがGitHub CLIです。また、元々hubをメンテナンスしていた方がGitHub CLIの方をメンテナンスするようになったので、hubを使ってる方も移行を考えた方が良さそうです。
- 
-diff --git a/tools/github_dev.md b/tools/github_dev.md
-index 47a03be..a2fdd39 100644
---- a/tools/github_dev.md
-+++ b/tools/github_dev.md
-@@ -6,9 +6,9 @@
- | :---------------------------------------: | :---------------------------------------: |
- |                VSCode Web                 |                GitHub dev                 |
- 
+## GitHub Dev (VSCode Web)
 -　このツールを利用するメリットはライブラリの中身を見るときにコードジャンプがやりやすいところと、コミットなどもできるので、簡単な修正がやりやすいところだと感じています。他にもWeb対応しているVSCodeの拡張機能も利用できるため、例えば Visual Studio Live Share (https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) を使って簡単に共同編集したりもできます。
 +　このツールを利用するメリットはライブラリの中身を見るときにコードジャンプがやりやすいところと、コミットなどもできるので、簡単な修正がやりやすいところだと感じています。他にもWeb対応しているVSCodeの拡張機能も利用できるため、例えば Visual Studio Live Share (https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) を使って簡単に共同編集できます。
  
 -　ターミナルの機能などもWeb上で利用したい場合はGitHub Codespaces (https://github.com/features/codespaces) を利用する必要があります。現状だと、GitHub TeamかGitHub Enterprise Cloudでないと利用できませんが、これを使うことで、Web上で開発やビルドをしたり、VSCodeのほとんどの拡張機能が利用できます (https://code.visualstudio.com/docs/remote/codespaces)。
 +　ターミナルの機能などもWeb上で利用したい場合はGitHub Codespaces (https://github.com/features/codespaces) を利用する必要があります。現状だと、GitHub TeamかGitHub Enterprise Cloudでないと利用できませんが、これを使うことで、Web上で開発やビルドをしたり、VSCodeのほとんどの拡張機能が利用したりできます (https://code.visualstudio.com/docs/remote/codespaces)。
- 
- ### 類似サービス・ツール - Stackblitz
- 

@@ -1,9 +1,4 @@
-diff --git a/afterword.md b/afterword.md
-index 22fcf45..b957db2 100644
---- a/afterword.md
-+++ b/afterword.md
-@@ -7,15 +7,3 @@
- 
+## あとがき
  　あと締め切りに間に合わなくて、nxやturboreposなど書ききれなかった部分もあります。viteやdenoに関してももう少し書く予定でしたが、締め切りに負けました。無念！
  
 -## 技術書について
@@ -18,163 +13,43 @@ index 22fcf45..b957db2 100644
 -　1月 => 正月 => 神社 => 狐、巫女服 という連想ゲームで今回のイラストになりました。ただ、キャラデザ自体あまりやらないのと、久しぶりに絵を描いたので、構図決めや資料探しに時間がかかりました (もっと早く描けるようになりたい...)。
 -
 -　あと反省点として、先に書籍検索ページ (https://techbookfest.org/market/search) を見ておくべきだったと感じています。本の表紙が一覧で表示されるのですが、111 × 158 px ぐらいの大きさしかなく、タイトルとイラストをある程度の大きさにしないと何の本か分かりません。今回は先にイラストを描いてしまったので、イラストとタイトルの配置が難しかったです。ある程度タイトルからどういうジャンルの本かわかるようにしつつ、絵も見せて、クリックしたら具体的な内容 (2021年に登場した...) が分かるようにしてますが、もっと上手くできたかもと感じています。
-\ No newline at end of file
-diff --git a/frameworks/index.md b/frameworks/index.md
-index 480831e..b845fb8 100644
---- a/frameworks/index.md
-+++ b/frameworks/index.md
-@@ -1 +1 @@
--# フレームワーク編
-+# 4章 フレームワーク編
-diff --git a/frameworks/next12.md b/frameworks/next12.md
-index a98f710..a058d22 100644
---- a/frameworks/next12.md
-+++ b/frameworks/next12.md
-@@ -82,3 +82,5 @@ module.exports = {
- 　画像関連で追加すると、next/imageの挙動が変わりました。以前のバージョンではdivタグに画像が囲まれるのですが、Next.js12からはspanタグに変わります (https://nextjs.org/blog/next-12#breaking-changes)。また、送信する画像のバリエーション (大きさ) も変わっているみたいです。
  
- 　開発面でいうと、RustコンパイラのSWCを組み込むようになりました。結果として、ホットリロードが最大3倍、本番モードでのビルドが最大5倍速くなったそうです (https://nextjs.org/blog/next-12#faster-builds-and-fast-refresh-with-rust-compiler)。
-+
-+<div style="page-break-after: always; break-after: page;color:lightgray" class="no-print">─────改ページ─────</div>
-diff --git a/frameworks/nuxt3.md b/frameworks/nuxt3.md
-index e191e2e..66c9046 100644
---- a/frameworks/nuxt3.md
-+++ b/frameworks/nuxt3.md
-@@ -71,8 +71,6 @@ export default defineNuxtConfig({
- })
- ```
- 
--<div style="page-break-after: always; break-after: page;color:lightgray" class="no-print">─────改ページ─────</div>
--
- ### 今後の展開
- 
- 　GitHubのリポジトリのDiscussionにて、パスごとにビルド方式を変える機能が議論されています (https://github.com/nuxt/framework/discussions/560)。ホスティングサービスにデプロイしたとして、どうやって動かすかは分かりませんが、個人的に面白い機能だと感じました。
-diff --git a/libraries/index.md b/libraries/index.md
-index cdd60e8..feada94 100644
---- a/libraries/index.md
-+++ b/libraries/index.md
-@@ -1 +1 @@
--# ライブラリ編
-+# 3章 ライブラリ編
-diff --git a/others/index.md b/others/index.md
-index b5850e8..75c6772 100644
---- a/others/index.md
-+++ b/others/index.md
-@@ -1 +1 @@
--# その他
-+# 5章 その他
-diff --git a/others/pulumi.md b/others/pulumi.md
-index bf450d3..ee54453 100644
---- a/others/pulumi.md
-+++ b/others/pulumi.md
-@@ -29,8 +29,6 @@ exports.bucketName = bucket.id
- exports.websiteEndpoint = websiteEndpoint
- ```
- 
--<div style="page-break-after: always; break-after: page;color:lightgray" class="no-print">─────改ページ─────</div>
--
- 　デプロイ時はこのような画面になります。また、Terraformと同じように、デプロイごとに状態ファイルを作成するため、差分を確認できます。
- 
- | <img src="../images/pulumi/pulumi-up.png" alt="pulumi-upload" style="zoom:50%;" /> | <img src="../images/pulumi/diff.png" alt="pulumi-diff" style="zoom:50%;" /> |
-diff --git a/preface.md b/preface.md
-index 9e7ee0c..1d9b98a 100644
---- a/preface.md
-+++ b/preface.md
-@@ -1,18 +1,14 @@
- 
- 
--[TOC]
--
- # はじめに
- 
+# はじめに
 -　この本では2021年ぐらいに生まれたライブラリやウェブサービス、主要サービスの機能について紹介します。筆者の実務や興味の範囲でピックアップしているので、漏れはあると思いますが、ご了承ください。参考文献や最後の方には情報収集でよく使うリソースをまとめているので、興味のある方確認してみてください。
 +　この本では2021年ぐらいに生まれたライブラリやウェブサービス、主要サービスの機能について紹介します。筆者の実務や興味の範囲でピックアップしているので、漏れはあると思いますがご了承ください。
  
 -　また、内容の正確性に配慮していますが、誤りが含まれている可能性があります。もし、何かの間違いで本書の内容を何かに活用される場合は、参考文献を付けているため、必ず目を通してください。ただ、参考文献が多々説明不足なこともあるので、興味のあるトピックについては実際に試してみることもお勧めします。
 +　また、内容の正確性に配慮していますが、誤りが含まれている可能性があります。もし、何かの間違いで本書の内容を何かに活用される場合は、参考文献に必ず目を通してください。ただ、参考文献が多々説明不足なこともあるので、興味のあるトピックについては実際に試してみることもお勧めします。
  
- ## 本書で扱うこと
- 
+## 本書で扱うこと 
 -　本書では5つのカテゴリーで以下の内容について紹介します。具体的な使い方よりはこれを使うとどういう点で便利か、既存のものとどういう違いがあるのかに焦点を当てて説明します。そのため、独断と偏見で何が嬉しいのか分からないものについては簡素に説明するか全く説明しないためご了承ください。
 -
 -　本書で扱う各トピックはそれぞれ独立しているため、気になるものから読んでみてください。文章量により入れ替えている部分もありますが、各カテゴリーの最初の方に出てくるものが筆者の推しです (ご参考までに)。
 +　本書では5つのカテゴリーで以下の内容について紹介します。本書で扱う各トピックはそれぞれ独立しているため、気になるものから読んでみてください。文章量により入れ替えている部分もありますが、各カテゴリーの最初の方に出てくるものが筆者の推しです (ご参考までに)。
  
- - 開発ツール編
-   - port7777 / GitHub CLI / GitHub Copilot  / GitHub Dev・VSCode Web / Berry / zx / Chrome DevTools
-@@ -27,7 +23,7 @@
- 
- ## 本書で扱わないこと
- 
+## 本書で扱わないこと
 -　なるべくページ数を省くため、本書ではセットアップ方法や詳細な使い方などを省略しています。実際に面白そうと思ったものについては、実際に調べて試してみてください。また以下のトピックについても本書では触れません。
 +　なるべくページ数を省くため、本書ではセットアップ方法や詳細な使い方などを省略しています。また以下のトピックについても本書では触れません。
  
- - セキュリティ関連 (ua-parser-jsやLog4j, faker.jsなど興味深い話はありますが、本書では一切触れません)
- - Web APIの仕様関連 (WebGL2とかWebTransportなど)
-@@ -38,13 +34,13 @@
- 
- ## 対象読者と前提知識
- 
+## 対象読者と前提知識 
 -　新しいものに出会いたい人、2021年の出来事を (適当なフィルタリング通し) 大雑把に把握したい人向けの本です。前提知識の設定が難しいですが、Webエンジニア2年目なら大体理解できるように書いてます (自分比)。難しい概念もなるべく分かりやすく書いてますが、その分厳密性がないので、明らかに間違っている場合はご指摘いただけるとありがたいです。
 +　新しいものに出会いたい人、2021年の出来事を (適当なフィルタリング通し) 大雑把に把握したい人向けの本です。前提知識の設定が難しいですが、Webエンジニア2年目なら大体理解できるように書いてます (自分比)。
  
 -　あと専門書を読むときもそうだと思いますが、書かれていることが全て正しいとは限りません。疑問に思ったところや矛盾してるのでは？と感じたら、調べてください。そして余力があれば、筆者までご連絡いただけるとありがたいです。
 +　あと専門書を読むときもそうだと思いますが、書かれていることが全て正しいとは限りません。疑問に思ったところや矛盾してるのでは？と感じたら、調べてください。そして余力があれば、筆者までご連絡いただけると大変助かります。
  
- ## 問い合わせ先
- 
+## 問い合わせ先 
 -　誤植や間違い、その他感想などはGitHubまたはTwitter, メールにてよろしくお願いします。ただし、人にメッセージを返すときはかなり慎重になるので、返事は遅めになります、ご了承ください。また、本書ではわかりやすさ優先のため、エンドポイントやリソース名をマスクせずに表示してます。それらのリソースは削除済みなので、ご連絡不要です。
 +　誤植や間違い、その他感想などはGitHubまたはTwitter, メールにてよろしくお願いします。また、本書ではわかりやすさ優先のため、エンドポイントやリソース名をマスクせずに表示してます。それらのリソースは削除済みなので、ご連絡不要です。
  
- GitHub: https://github.com/pilefort/tech-dojin.2021.web-change-log
- 
-diff --git a/references.md b/references.md
-index 3b8b4b7..1310d5d 100644
---- a/references.md
-+++ b/references.md
-@@ -1,4 +1,4 @@
 -# 参考文献
 +# 情報収集に役立つリソース
  
- ## Google / Chrome
- 
-@@ -37,6 +37,10 @@
-   - 英語版の方が情報は早いですが、日本語版の方が情報がよくまとまっているので、こちらの方が便利です
-   - サービス名で検索できるので、自身の興味あるサービスで検索し、アップデート情報を調べたりできます
- 
 +## Twitter
-+
 +情報収集先としてのTwitterは非常に優れています。気になるライブラリやサービスの公式Twitterやメンテナ、コミッターをフォローしておくと面白い情報が流れてくるため、オススメです。
 +
- ## ニュースをまとめてる方
- 
- - JSer
-@@ -57,14 +61,10 @@
- - Tech Feed
-   - https://techfeed.io/channels
-   - 面白いブログ記事を見つけるのに便利です。
--
- - サイボウズのProductivity Weekly
-   - https://zenn.dev/topics/productivityweekly
-   - https://twitter.com/hashtag/cybozu_productivity_weekly?src=hashtag_click
-   - 生産性向上に関わるネタを共有してます。フロント系以外のネタも投下されているので、見ていて面白いです。
+
+## ニュースをまとめてる方
 -- やっすんのエンジニアニュース
 -  - https://www.youtube.com/playlist?list=PL0ATFRXu9uEBPEWTpdQjYtHedkCHBrsaC
 -  - JSerやThis Week In Reactなどは概要レベルで紹介していますが、こちらのYouTubeチャンネルでは踏み込んだ説明をしてます。フロント系の話題が多めですが、AWSやGitHub, Ruby, PHPなど幅広い内容を扱っています。
- - Hacker News Dialy
-   - https://github.com/headllines/hackernews-daily/issues
-   - Hacker Newsで話題になってるものが分かります。脆弱性関連の速報はここが早い印象です。
-diff --git a/services/index.md b/services/index.md
-index 56d9be2..c848afd 100644
---- a/services/index.md
-+++ b/services/index.md
-@@ -1 +1 @@
--# サービス編
-+# 2章 サービス編
-diff --git a/tools/index.md b/tools/index.md
-index fcb9861..0489d53 100644
---- a/tools/index.md
-+++ b/tools/index.md
-@@ -1 +1 @@
--# 開発ツール編
-+# 1章 開発ツール編

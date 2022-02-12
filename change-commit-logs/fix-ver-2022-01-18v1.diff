@@ -1,26 +1,8 @@
-diff --git a/others/pulumi.md b/others/pulumi.md
-index bbc1479..bf450d3 100644
---- a/others/pulumi.md
-+++ b/others/pulumi.md
-@@ -31,7 +31,7 @@ exports.websiteEndpoint = websiteEndpoint
- 
- <div style="page-break-after: always; break-after: page;color:lightgray" class="no-print">─────改ページ─────</div>
- 
+## Pulumi
 -　デプロイ時はこのような画面になります。また、Terraformと同じように、デプロイごとに状態ファイルを作成するため、差分を確認することができます。
 +　デプロイ時はこのような画面になります。また、Terraformと同じように、デプロイごとに状態ファイルを作成するため、差分を確認できます。
  
- | <img src="../images/pulumi/pulumi-up.png" alt="pulumi-upload" style="zoom:50%;" /> | <img src="../images/pulumi/diff.png" alt="pulumi-diff" style="zoom:50%;" /> |
- | :----------------------------------------------------------: | :----------------------------------------------------------: |
-diff --git a/services/render.md b/services/render.md
-index cefc82b..3d294fc 100644
---- a/services/render.md
-+++ b/services/render.md
-@@ -28,7 +28,7 @@
- 
- 　2020年の12月ぐらいにRailwayというサービスも出てきました (https://railway.app/changelog/2021-12-31)。こちらはHerokuと同じBuildpack (https://devcenter.heroku.com/ja/articles/buildpacks) を使ってゼロコンフィグでアプリの動作環境を構築してくれます。ただし、Dockerfileがある場合はそちらを優先してビルドしてくれます。
- 
+## Render 
 -　こちらのサービスはプラグインとして、MySQLやPostgreSQL, Redis, MongoDBを後から追加することができます。Renderでは別々のダッシュボードで管理しますが、Railwayでは1つのダッシュボードでアプリとDBを管理できます。ちなみに、ダッシュボードはデフォルトでダークモードで変更できません。
 +　こちらのサービスはプラグインとして、MySQLやPostgreSQL, Redis, MongoDBを後から追加できます。Renderでは別々のダッシュボードで管理しますが、Railwayでは1つのダッシュボードでアプリとDBを管理できます。ちなみに、ダッシュボードはデフォルトでダークモードで変更できません。
  
- | <img src="../images/railway/plugin.png" alt="plugin" style="zoom:60%;" /> | <img src="../images/railway/dashboard.png" alt="dashboard" style="zoom:40%;" /> |
- | :----------------------------------------------------------: | :----------------------------------------------------------: |
