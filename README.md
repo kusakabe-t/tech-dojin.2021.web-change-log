@@ -3,15 +3,15 @@
 
 このGitHubリポジトリは本書のサポートページです。
 
-元々は元データも含めてパブリックに公開していたのですが、買って頂いた方に悪いので非公開にしました。
+本の内容はこちらで確認できます。
 
-本はこちらから購入できます。
+https://github.com/kusakabe-t/tech-dojin.2021.web-change-log.body
 
-https://techbookfest.org/product/5334756306714624
-
-また、BOOTHにて書籍 + 電子版を配布予定です (2月頃を予定しています)。
+PDFで読みたい方はこちらからダウンロードできます。
 
 https://pilefort.booth.pm/items/3633323
+
+https://techbookfest.org/product/5334756306714624
 
 # 正誤表
 現在判明している誤字脱字、表記ミスはこちらになります。
